@@ -21,13 +21,12 @@ function createGallery(items ) {
     const markup = items.map(({preview, original, description}) =>
         `
         <div class="gallery__item">
-      <a class="gallery__link" href=${preview}>
+      <a class="gallery__link" href=${original}>
         <img
           class="gallery__image"
           src=${preview}
           data-source=${original}
           alt=${description}
-          class="noLink"
         />
       </a>
     </div>
@@ -43,7 +42,7 @@ refs.gallery.insertAdjacentHTML('beforeend', lis);
 
 
 function galleryView (e) {
-console.log('click', e.target.dataset.source);
+// console.log('click', e.target.dataset.source);
 if (!e.target.classList.contains('gallery__image')) {
     return
 };
