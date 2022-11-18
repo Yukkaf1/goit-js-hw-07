@@ -22,18 +22,3 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
-
-.gallery-task03 {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 180px;
-  
-}
-
-.image-gallery-task03 {
-  overflow: hidden;
-  margin-left: 10px;
-  height: 100%;
-}
