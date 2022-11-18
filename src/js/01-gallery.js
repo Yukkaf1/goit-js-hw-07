@@ -41,17 +41,21 @@ const lis =  createGallery(galleryItems);
 
 refs.gallery.insertAdjacentHTML('beforeend', lis);
 
-function galleryUrl (e) {
+
+function galleryView (e) {
 console.log('click', e.target.dataset.source);
 if (!e.target.classList.contains('gallery__image')) {
     return
 };
-
     e.preventDefault();
 
     refs.modalImg.src = e.target.dataset.source;
-    instance.show()
+    instance.show();
+
 };
 
+refs.gallery.addEventListener('click', galleryView);
 
-refs.gallery.addEventListener('click', galleryUrl);
+refs.modalImg.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') {instance.close();}
+});
