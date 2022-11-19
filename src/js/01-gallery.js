@@ -12,8 +12,10 @@ const instance = basicLightbox.create(`
 const refs = {
     gallery: document.querySelector(".gallery"),
     modalImg: instance.element().querySelector('.modal-img'),
+    // modal: instance.element().querySelector('.modal'),
 }
 
+// console.log(instance);
 console.log(refs.gallery);
 console.log(refs.modalImg);
 
@@ -55,6 +57,6 @@ if (!e.target.classList.contains('gallery__image')) {
 
 refs.gallery.addEventListener('click', galleryView);
 
-refs.modalImg.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape') {instance.close();}
-});
+// refs.modal.addEventListener('keydown', (e) => {
+//     if(e.key === 'Escape') {instance.close();}
+// });

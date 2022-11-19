@@ -8,9 +8,7 @@ const refs = {
     gallery: document.querySelector(".gallery"),
 }
 
-var gallery = $('.gallery a').simpleLightbox();
 
-gallery.next();
 
 function createGallery(items ) {
     const markup = items.map(({preview, original, description}) =>
@@ -31,7 +29,7 @@ function createGallery(items ) {
 
 
 function galleryView (e) {
-        e.preventDefault();
+        e.preventDefault(); 
     };
 
 
@@ -40,3 +38,9 @@ const lis =  createGallery(galleryItems);
 refs.gallery.insertAdjacentHTML('beforeend', lis);
 
 refs.gallery.addEventListener('click', galleryView);
+
+
+const lightbox = new SimpleLightbox('.gallery__item', {
+  captionsData: "alt", captionDelay: 250});
+
+console.log(lightbox.options);
